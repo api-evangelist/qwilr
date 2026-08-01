@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://mcp.qwilr.com/.well-known/oauth-protected-resource
+server:
+  name: qwilr
+  transport: http
+  url: https://mcp.qwilr.com
+  protocol: jsonrpc-2.0
+auth:
+  type: oauth2
+  authorization_server: https://api.qwilr.com
+  protected_resource_metadata: https://mcp.qwilr.com/.well-known/oauth-protected-resource
+  authorization_server_metadata: https://api.qwilr.com/.well-known/oauth-authorization-server
+  scopes_supported:
+  - mcp
+  bearer_methods_supported:
+  - header
+  grant_types_supported:
+  - authorization_code
+  - refresh_token
+  - urn:ietf:params:oauth:grant-type:token-exchange
+  authorization_endpoint: https://api.qwilr.com/oauth/authorize
+  token_endpoint: https://api.qwilr.com/oauth/token
+  registration_endpoint: https://api.qwilr.com/oauth/register
+  code_challenge_methods_supported:
+  - S256
+tools: []
+notes: >-
+  Qwilr operates a live, OAuth-protected hosted MCP server at https://mcp.qwilr.com.
+  An unauthenticated JSON-RPC tools/list returns {"error":{"code":-32001,
+  "message":"Unauthorized"}} (HTTP 401), so the concrete tool catalog could not be
+  enumerated without a valid "mcp"-scoped bearer token; tools[] is intentionally
+  left empty rather than fabricated. The server supports Dynamic Client
+  Registration (RFC 7591) and PKCE (S256), consistent with the MCP authorization
+  spec.

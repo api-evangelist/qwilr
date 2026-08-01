@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.qwilr.com/api-reference
+versioning:
+  scheme: uri-path
+  current: v1
+  base_url: https://api.qwilr.com/v1
+  docs: https://docs.qwilr.com/api-reference
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: No formal API deprecation / Sunset-header policy located in the docs.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.qwilr.com
+changelog: https://product.qwilr.com/Qwilr-Product-Updates-2025-ZmP5Cml2THGA
+deprecated_operations: []

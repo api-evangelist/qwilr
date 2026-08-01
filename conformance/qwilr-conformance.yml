@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: https://qwilr.com/trust-and-security/
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    api.qwilr.com publishes RFC 8414 OAuth 2.0 Authorization Server Metadata;
+    mcp.qwilr.com publishes RFC 9728 OAuth 2.0 Protected Resource Metadata.
+- id: oauth2-token-exchange-rfc8693
+  conforms: true
+  evidence: grant_types_supported includes urn:ietf:params:oauth:grant-type:token-exchange
+- id: oauth2-pkce-rfc7636
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256
+- id: oauth2-dcr-rfc7591
+  conforms: true
+  evidence: authorization server metadata exposes a registration_endpoint
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: https://qwilr.com/.well-known/security.txt present (Contact + Policy + Expires)
+- id: soc2-type2
+  conforms: true
+  evidence: SOC 2 Type 2 audit completed (qwilr.com/trust-and-security)
+- id: pci-dss
+  conforms: true
+  evidence: PCI DSS Level 1 compliance via Stripe payment processing
+- id: gdpr
+  conforms: true
+  evidence: GDPR compliance stated on trust-and-security page
+- id: ueta
+  conforms: true
+  evidence: UETA e-signature compliance
+- id: eidas
+  conforms: true
+  evidence: eIDAS e-signature standard compliance
+- id: esign-act
+  conforms: true
+  evidence: US E-SIGN Act e-signature compliance
+- id: openid-connect
+  conforms: false
+  evidence: no /.well-known/openid-configuration published (404)
+- id: iso-27001
+  conforms: false
+  evidence: not claimed on trust-and-security page
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no published OpenAPI; error envelope not documented as application/problem+json

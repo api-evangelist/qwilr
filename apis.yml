@@ -1,7 +1,16 @@
 aid: qwilr
 name: Qwilr
-description: Qwilr is a company surfaced as a portfolio company of point-nine and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Qwilr is a document-experience platform for creating interactive, web-based
+  sales proposals, quotes, contracts, and reports that replace static PDFs.
+  Beyond the editor, Qwilr exposes a REST API (https://api.qwilr.com/v1) and a
+  hosted, OAuth-protected Model Context Protocol (MCP) server that let teams
+  generate branded pages from templates and reusable saved blocks, manage quote
+  tax definitions and Qwilr Pay payment gateways, subscribe to page-lifecycle
+  webhook events (viewed, accepted, set-live), and automate the sales workflow
+  programmatically. API access is an Enterprise capability authenticated with
+  bearer JWT access tokens. Qwilr is backed by Point Nine and maintains a public
+  trust portal with SOC 2 Type 2, PCI DSS, and GDPR posture.
 url: https://raw.githubusercontent.com/api-evangelist/qwilr/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +18,55 @@ x-backed-by:
 - point-nine
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Proposals
+- Documents
+- Sales
+- Quotes
+- Contracts
+- E-Signature
+- Webhooks
+- MCP
+- SaaS
+image: https://qwilr.com/apple-touch-icon.png
+apis:
+- name: Qwilr API
+  description: >-
+    REST API for programmatically creating and managing Qwilr pages (proposals,
+    quotes, contracts, reports) from templates and saved blocks, managing quote
+    taxes, listing payment gateways and users, and subscribing to page-lifecycle
+    webhooks. Bearer-token (JWT) authentication; Enterprise plan required.
+  humanURL: https://docs.qwilr.com/
+  baseURL: https://api.qwilr.com/v1
+  tags:
+  - Proposals
+  - Documents
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://docs.qwilr.com/
+  - type: APIReference
+    url: https://docs.qwilr.com/api-reference
+  - type: GettingStarted
+    url: https://docs.qwilr.com/docs/getting-started/quick-start
+  - type: Authentication
+    url: authentication/qwilr-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +75,66 @@ maintainers:
 common:
 - type: Website
   url: https://qwilr.com
+- type: DeveloperPortal
+  url: https://docs.qwilr.com/
+- type: Documentation
+  url: https://docs.qwilr.com/
+- type: APIReference
+  url: https://docs.qwilr.com/api-reference
+- type: GettingStarted
+  url: https://docs.qwilr.com/docs/getting-started/quick-start
+- type: Support
+  url: https://help.qwilr.com/
+- type: Blog
+  url: https://qwilr.com/blog/
+- type: Pricing
+  url: https://qwilr.com/pricing/
+- type: SignUp
+  url: https://app.qwilr.com/#/signup
+- type: Login
+  url: https://app.qwilr.com/#/login
+- type: TermsOfService
+  url: https://qwilr.com/terms/
+- type: PrivacyPolicy
+  url: https://qwilr.com/privacy-policy/
+- type: StatusPage
+  url: https://status.qwilr.com
+- type: ChangeLog
+  url: https://product.qwilr.com/Qwilr-Product-Updates-2025-ZmP5Cml2THGA
+- type: Authentication
+  url: authentication/qwilr-authentication.yml
+- type: OAuthScopes
+  url: scopes/qwilr-scopes.yml
+- type: MCPServer
+  url: mcp/qwilr-mcp.yml
+- type: WellKnown
+  url: well-known/qwilr-well-known.yml
+- type: SecurityTxt
+  url: well-known/qwilr-security.txt
+- type: DomainSecurity
+  url: security/qwilr-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/qwilr-vulnerability-disclosure.yml
+- type: Security
+  url: https://qwilr.com/vulnerability-disclosure/
+- type: TrustCenter
+  url: security/qwilr-trust-center.yml
+- type: Compliance
+  url: https://trust.qwilr.com/
+- type: Conformance
+  url: conformance/qwilr-conformance.yml
+- type: Lifecycle
+  url: lifecycle/qwilr-lifecycle.yml
+- type: Conventions
+  url: conventions/qwilr-conventions.yml
+- type: DataModel
+  url: data-model/qwilr-data-model.yml
+- type: Webhooks
+  url: asyncapi/qwilr-webhooks.yml
+- type: LLMsTxt
+  url: llms/qwilr-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1

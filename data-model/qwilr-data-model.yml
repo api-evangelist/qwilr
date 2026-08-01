@@ -1,0 +1,70 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.qwilr.com/api-reference
+notes: >-
+  Entity graph derived from the documented Qwilr REST API operation surface
+  (no published OpenAPI). Field-level id references are inferred from documented
+  resources and path parameters; relationships marked inferred where the docs
+  do not spell out the foreign key.
+entities:
+- name: Page
+  description: A Qwilr document (proposal, quote, contract, report) created from a template or saved blocks.
+  id_field: pageId
+  operations:
+  - POST /pages
+  - GET /pages/{pageId}
+  - PUT /pages/{pageId}
+- name: SavedBlock
+  description: A reusable content block that can be composed into a page.
+  id_field: id
+  operations:
+  - GET /blocks/saved
+- name: Tax
+  description: A quote tax definition configured on the account.
+  id_field: taxId
+  operations:
+  - GET /taxes
+  - POST /taxes
+  - PATCH /taxes/{taxId}
+  - DELETE /taxes/{taxId}
+- name: PaymentGateway
+  description: A Qwilr Pay payment gateway configured on the account.
+  operations:
+  - GET /payment-gateways
+- name: WebhookSubscription
+  description: A subscription to Qwilr page-lifecycle webhook events.
+  id_field: subscriptionId
+  operations:
+  - GET /webhooks
+  - POST /webhooks
+  - DELETE /webhooks/{subscriptionId}
+- name: User
+  description: An account user with a role and team name.
+  operations:
+  - GET /users
+relationships:
+- from: Page
+  to: SavedBlock
+  type: has_many
+  via: blocks
+  inferred: true
+- from: Page
+  to: Tax
+  type: has_many
+  via: taxes
+  inferred: true
+- from: Page
+  to: PaymentGateway
+  type: belongs_to
+  via: paymentGateway
+  inferred: true
+- from: WebhookSubscription
+  to: Page
+  type: belongs_to
+  via: events (page lifecycle)
+  inferred: true
+- from: User
+  to: Page
+  type: has_many
+  via: owner
+  inferred: true

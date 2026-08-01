@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+type: Webhooks
+source: https://docs.qwilr.com/api-reference
+transport: http-webhook
+management:
+  subscribe: POST https://api.qwilr.com/v1/webhooks
+  list: GET https://api.qwilr.com/v1/webhooks
+  unsubscribe: DELETE https://api.qwilr.com/v1/webhooks/{subscriptionId}
+events:
+- name: pageAccepted
+  description: A Qwilr page (proposal/quote) was accepted by the recipient.
+- name: pagePartiallyAccepted
+  description: A page was partially accepted (e.g. some quote options selected).
+- name: pagePreviewAccepted
+  description: A page preview was accepted.
+- name: pageViewed
+  description: A page was viewed by a recipient.
+- name: pageFirstViewed
+  description: A page was viewed for the first time.
+- name: pageSetLive
+  description: A page was set live (published).
+- name: pageRevivedLive
+  description: A previously disabled page was revived / set live again.
+notes: >-
+  Qwilr documents webhook subscriptions managed via the REST API. Consumers
+  register a subscription URL for one or more of the events above; document
+  lifecycle events (view/accept) are the primary triggers, commonly wired to
+  payment gateways or CRM/sales workflows. No published AsyncAPI document was
+  found, so this is captured as a Webhooks event catalog rather than an
+  AsyncAPI spec.

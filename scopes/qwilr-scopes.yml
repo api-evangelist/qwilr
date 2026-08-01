@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://api.qwilr.com/.well-known/oauth-authorization-server
+docs: https://mcp.qwilr.com/.well-known/oauth-protected-resource
+schemes:
+- name: mcpOAuth2
+  source: api.qwilr.com/.well-known/oauth-authorization-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.qwilr.com/oauth/authorize
+    tokenUrl: https://api.qwilr.com/oauth/token
+scopes:
+- scope: mcp
+  description: >-
+    Grants an OAuth client access to the Qwilr hosted MCP server at
+    https://mcp.qwilr.com. This is the only scope advertised by Qwilr's
+    OAuth 2.0 authorization server metadata (scopes_supported).
+  flows:
+  - authorizationCode
+  sources:
+  - api.qwilr.com/.well-known/oauth-authorization-server
+notes: >-
+  The REST API (api.qwilr.com/v1) uses opaque bearer JWT tokens generated in-app,
+  not OAuth scopes. The only documented OAuth scope surface is the single "mcp"
+  scope fronting the MCP server.

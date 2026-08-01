@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://qwilr.com/trust-and-security/
+url: https://trust.qwilr.com/
+certifications:
+- SOC 2 Type 2
+- PCI DSS (Level 1, via Stripe)
+- GDPR
+- UETA
+- eIDAS
+- E-SIGN Act
+subprocessors: https://trust.qwilr.com/
+status_page: https://status.qwilr.com
+security_practices:
+- Encryption in transit and at rest
+- SSO and role-based access controls
+- AWS-based infrastructure
+- Data backup and retention practices
+evidence:
+- source: https://qwilr.com/trust-and-security/
+  keywords:
+  - SOC 2 Type 2
+  - PCI DSS
+  - GDPR
+  - trust portal
+- source: https://trust.qwilr.com/
+  keywords:
+  - trust center
+  - sub-processors

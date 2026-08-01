@@ -1,0 +1,35 @@
+# Qwilr
+
+> Qwilr is a document-experience platform for creating interactive, web-based
+> sales proposals, quotes, contracts, and reports. Its REST API and hosted MCP
+> server let teams generate branded pages from templates and saved blocks,
+> manage quote taxes and payment gateways, subscribe to page-lifecycle webhook
+> events, and automate the sales workflow programmatically.
+
+## API
+- [Qwilr REST API](https://api.qwilr.com/v1): Base URL for the Qwilr API. Bearer-token (JWT) auth. Enterprise plan with API access required.
+
+## Docs
+- [API Documentation](https://docs.qwilr.com/): Qwilr developer documentation home.
+- [API Reference](https://docs.qwilr.com/api-reference): Endpoint reference (pages, saved blocks, taxes, payment gateways, webhooks, users).
+- [Quick Start](https://docs.qwilr.com/docs/getting-started/quick-start): Get an access token and create your first page.
+- [Help Centre](https://help.qwilr.com/): Product help and support.
+
+## MCP
+- [Qwilr MCP Server](https://mcp.qwilr.com): OAuth-protected (scope `mcp`) hosted Model Context Protocol server.
+
+## Webhooks
+- Events: pageAccepted, pagePartiallyAccepted, pagePreviewAccepted, pageViewed, pageFirstViewed, pageSetLive, pageRevivedLive.
+
+## Trust & Security
+- [Trust & Security](https://qwilr.com/trust-and-security/): SOC 2 Type 2, PCI DSS (via Stripe), GDPR, UETA/eIDAS/E-SIGN.
+- [Trust Portal](https://trust.qwilr.com/): Certifications and sub-processors.
+- [security.txt](https://qwilr.com/.well-known/security.txt): Security contact and disclosure policy.
+- [Vulnerability Disclosure](https://qwilr.com/vulnerability-disclosure/): Responsible disclosure program.
+- [Status](https://status.qwilr.com): System status.
+
+## Company
+- [Website](https://qwilr.com): Qwilr home.
+- [Pricing](https://qwilr.com/pricing/): Plans (API access is an Enterprise add-on).
+- [Integrations](https://qwilr.com/integrations/): HubSpot, Salesforce, Pipedrive, Zapier, Stripe, and more.
+- [Blog](https://qwilr.com/blog/): Qwilr blog.

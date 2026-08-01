@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.qwilr.com/api-reference
+authentication:
+  style: bearer-token
+  header: Authorization
+  format: Bearer <JWT>
+  detail: authentication/qwilr-authentication.yml
+versioning:
+  style: uri-path
+  current: v1
+  base_url: https://api.qwilr.com/v1
+  detail: lifecycle/qwilr-lifecycle.yml
+content_type: application/json
+idempotency:
+  supported: false
+  notes: No idempotency-key header/parameter is documented for the Qwilr API.
+pagination:
+  style: unknown
+  notes: >-
+    List endpoints (GET /blocks/saved, GET /taxes, GET /payment-gateways,
+    GET /webhooks, GET /users) are documented but a pagination scheme
+    (cursor/offset params, envelope fields) is not published in the docs.
+request_tracing:
+  request_id_header: unknown
+error_envelope:
+  documented: false
+  detail: null
+rate_limiting:
+  documented: false
+  headers: []
+webhooks:
+  supported: true
+  detail: asyncapi/qwilr-webhooks.yml
+notes: >-
+  Qwilr publishes a REST API reference but does not document cross-cutting
+  conventions such as idempotency, pagination, rate-limit signalling, or a
+  standard error envelope. Fields above are recorded as unknown/false rather
+  than fabricated. No `type: Idempotency` pointer is emitted because idempotency
+  is not supported/documented.

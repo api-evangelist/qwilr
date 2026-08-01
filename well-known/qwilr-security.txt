@@ -1,0 +1,5 @@
+Contact: mailto:security@qwilr.com
+Expires: 2026-02-28T00:00:00.000Z
+Acknowledgments: https://product.qwilr.com/Security-Hall-of-Fame-eBToaufcTv0t
+Preferred-Languages: en
+Policy: https://qwilr.com/vulnerability-disclosure/

@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.qwilr.com/docs/getting-started/quick-start
+docs: https://docs.qwilr.com/api-reference
+summary:
+  types:
+  - http
+  - oauth2
+  api_key_in: []
+  oauth2_flows:
+  - authorizationCode
+  - tokenExchange
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearer_format: JWT
+  description: >-
+    REST API (https://api.qwilr.com/v1) authenticates with a bearer access token
+    (JWT) in the Authorization header. Tokens are generated once in the Qwilr app
+    at https://app.qwilr.com/#/settings/api and shown only a single time. API
+    access requires an Enterprise Qwilr plan with API access enabled.
+  applies_to: https://api.qwilr.com/v1
+  sources:
+  - docs.qwilr.com/api-reference
+- name: mcpOAuth2
+  type: oauth2
+  description: >-
+    The hosted MCP server (https://mcp.qwilr.com) authenticates via OAuth 2.0
+    against the authorization server at https://api.qwilr.com, per RFC 8414 /
+    RFC 9728 metadata. Supports authorization_code (PKCE S256), refresh_token,
+    and RFC 8693 token-exchange grants; scope "mcp".
+  applies_to: https://mcp.qwilr.com
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.qwilr.com/oauth/authorize
+    tokenUrl: https://api.qwilr.com/oauth/token
+    scopes:
+      mcp: Access the Qwilr MCP server
+  sources:
+  - api.qwilr.com/.well-known/oauth-authorization-server

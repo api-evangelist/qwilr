@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on qwilr.com, api.qwilr.com, mcp.qwilr.com
+hosts:
+- host: https://qwilr.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: qwilr-security.txt
+- host: https://api.qwilr.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: qwilr-oauth-authorization-server.json
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+- host: https://mcp.qwilr.com
+  documents:
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: qwilr-mcp-oauth-protected-resource.json
+notes: >-
+  api.qwilr.com publishes an RFC 8414 OAuth 2.0 Authorization Server Metadata
+  document advertising scopes_supported ["mcp"] and the token-exchange grant;
+  mcp.qwilr.com publishes an RFC 9728 OAuth Protected Resource document pointing
+  at api.qwilr.com as its authorization server. Together these front Qwilr's
+  hosted MCP server (see mcp/qwilr-mcp.yml).

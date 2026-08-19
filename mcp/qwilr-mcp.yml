@@ -26,11 +26,15 @@ auth:
   code_challenge_methods_supported:
   - S256
 tools: []
-notes: >-
-  Qwilr operates a live, OAuth-protected hosted MCP server at https://mcp.qwilr.com.
-  An unauthenticated JSON-RPC tools/list returns {"error":{"code":-32001,
-  "message":"Unauthorized"}} (HTTP 401), so the concrete tool catalog could not be
-  enumerated without a valid "mcp"-scoped bearer token; tools[] is intentionally
-  left empty rather than fabricated. The server supports Dynamic Client
-  Registration (RFC 7591) and PKCE (S256), consistent with the MCP authorization
-  spec.
+notes: Qwilr operates a live, OAuth-protected hosted MCP server at https://mcp.qwilr.com. An unauthenticated
+  JSON-RPC tools/list returns {"error":{"code":-32001, "message":"Unauthorized"}} (HTTP 401), so the concrete
+  tool catalog could not be enumerated without a valid "mcp"-scoped bearer token; tools[] is intentionally
+  left empty rather than fabricated. The server supports Dynamic Client Registration (RFC 7591) and PKCE
+  (S256), consistent with the MCP authorization spec.
+deployment:
+  mode: remote
+  endpoint: https://mcp.qwilr.com
+  verified: probed
+  probe: wall
+  checked: '2026-08-12'
+  source: catalog MCP census

@@ -41,6 +41,17 @@ tags:
 - Quotes
 - Contracts
 - E-Signature
+- Webhook
+- MCP
+- Software-as-a-Service
+tags_raw:
+- Company
+- Proposals
+- Documents
+- Sales
+- Quotes
+- Contracts
+- E-Signature
 - Webhooks
 - MCP
 - SaaS
@@ -55,6 +66,10 @@ apis:
   humanURL: https://docs.qwilr.com/
   baseURL: https://api.qwilr.com/v1
   tags:
+  - Proposals
+  - Documents
+  - Webhook
+  tags_raw:
   - Proposals
   - Documents
   - Webhooks

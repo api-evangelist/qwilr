@@ -64,6 +64,119 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Qwilr is a company surfaced as a portfolio company of point-nine and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Qwilr is a document-experience platform for creating interactive, web-based sales proposals, quotes, contracts, and reports that replace static PDFs. Beyond the editor, Qwilr exposes a REST API (https://api.qwilr.com/v1) and a hosted, OAuth-protected Model Context Protocol (MCP) server that let teams generate branded pages from templates and reusable saved blocks, manage quote tax definitions and Qwilr Pay payment gateways, subscribe to page-lifecycle webhook events (viewed, accepted, set-live), and automate the sales workflow programmatically. API access is an Enterprise capability authenticated with bearer JWT access tokens. Qwilr is backed by Point Nine and maintains a public trust portal with SOC 2 Type 2, PCI DSS, and GDPR posture.
 
-Backed by: point-nine — https://qwilr.com
+**Areas:** Company · Proposals · Documents · Sales · Quotes · Contracts · E-Signature · Webhook · MCP · Software-as-a-Service
+
+## Qwilr on APIs.io
+
+Everything profiled for Qwilr is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/qwilr/](https://apis.io/providers/qwilr/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Qwilr API](https://apis.io/apis/qwilr/qwilr-api/) — REST API for programmatically creating and managing Qwilr pages (proposals, quotes, contracts, reports) from templates and saved blocks, managing quote…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Qwilr Webhooks](https://apis.io/asyncapis/qwilr/qwilr-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [qwilr](https://apis.io/servers/qwilr/qwilr/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Qwilr Authentication](https://apis.io/security/qwilr/qwilr-authentication/)
+- [Qwilr Domain Security](https://apis.io/security/qwilr/qwilr-domain-security/)
+- [Qwilr Trust Center](https://apis.io/security/qwilr/qwilr-trust-center/)
+- [Qwilr Vulnerability Disclosure](https://apis.io/security/qwilr/qwilr-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Qwilr Scopes](https://apis.io/scopes/qwilr/qwilr-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://qwilr.com)
+- [Documentation](https://docs.qwilr.com/)
+- [Getting started](https://docs.qwilr.com/docs/getting-started/quick-start)
+- [API reference](https://docs.qwilr.com/api-reference)
+- [Pricing](https://qwilr.com/pricing/)
+- [Sign up](https://app.qwilr.com/#/signup)
+- [Support](https://help.qwilr.com/)
+- [Changelog](https://product.qwilr.com/Qwilr-Product-Updates-2025-ZmP5Cml2THGA)
+- [Blog](https://qwilr.com/blog/)
+- [Security](https://qwilr.com/vulnerability-disclosure/)
+- [Compliance](https://trust.qwilr.com/)
+- [Terms of service](https://qwilr.com/terms/)
+- [Privacy policy](https://qwilr.com/privacy-policy/)
+- [Status](https://status.qwilr.com)
+
+## API Evangelist rating
+
+**Kin Score 52.6** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 53.9 |
+
+**Agent readiness 44.6** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 45.1** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/qwilr/](https://apis.io/providers/qwilr/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Qwilr: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/qwilr/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
